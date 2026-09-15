@@ -1,0 +1,25 @@
+{
+  "name": "@quiclib/web",
+  "version": "0.1.0",
+  "description": "WebTransport browser adapter for QUIC-native transport",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@quiclib/protocol": "workspace:*"
+  },
+  "files": ["dist"],
+  "license": "MIT"
+}
